@@ -100,6 +100,7 @@ button:hover {
 
 .resultado {
   display: flex;
+  flex-direction: column;
   min-height: 6rem;
   padding: 1.5rem;
   text-align: center;
@@ -107,6 +108,21 @@ button:hover {
   border: 1px solid #374151;
   align-items: center;
   justify-content: center;
+}
+
+.ate {
+  border: 2px solid #14532d;
+  box-shadow: 0 0 16px #14532d;
+}
+
+.entre {
+  border: 2px solid #713f12;
+  box-shadow: 0 0 16px #713f12;
+}
+
+.acima {
+  border: 2px solid #7f1d1d;
+  box-shadow: 0 0 16px #7f1d1d;
 }
 
 footer {

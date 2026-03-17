@@ -1,29 +1,33 @@
 'use strict'
 
-function removerClasse() {
-    const resultado = document.getElementById('resultado')
-    resultado.classList.remove('ate', 'entre', 'acima')
+const calcularValorEconomizado = (preco, desconto) => preco * desconto / 100
+
+const calcularPrecoFinal = (preco, valorEconomizado) => preco - valorEconomizado
+
+function selecionarCor (desconto) {
+    if (desconto <= 5)
+        return 'desconto1'
+    else if (desconto <= 10)
+        return 'desconto2'
+    else
+        return 'desconto3'
 }
 
-function calcularDesconto() {
-    const preco = document.getElementById('preco')
-    const percentual = document.getElementById('percentual')
+function removerClasse() {
     const resultado = document.getElementById('resultado')
-    
-    const p = document.createElement('p')
+    resultado.classList.remove('desconto1', 'desconto2', 'desconto3')
+}
 
-    const decimal = percentual.value / 100
-    
+function handleClick () {
+    const preco = Number(document.getElementById('preco').value)
+    const desconto = Number(document.getElementById('desconto').value)
+    const resultado = document.getElementById('resultado')
+
+    const valorEconomizado = calcularValorEconomizado(preco, desconto)
+    const precoFinal = calcularPrecoFinal(preco, valorEconomizado)
+    const cor = selecionarCor(desconto)
+
     removerClasse()
-    if (percentual.value <= 5)
-        resultado.classList.add('ate')
-    else if (percentual.value > 5 && percentual.value < 10)
-        resultado.classList.add('entre')
-    else
-        resultado.classList.add('acima')
-
-    let valorFinal = preco.value - (preco.value * decimal)
-    let valorEconomizado = preco.value * decimal
-
-    resultado.textContent = `Valor economizado: ${valorEconomizado}\nValor final: ${valorFinal}`
+    resultado.textContent = `${valorEconomizado} - ${precoFinal}`
+    resultado.classList.add(cor)
 }

@@ -13,7 +13,7 @@ function definirSituacao (media) {
 
 function removerClasse() {
     document.getElementById('resultado')
-    .classList.remove('reprovado', 'recuperacao', 'aprovado')
+        .classList.remove('reprovado', 'recuperacao', 'aprovado')
 }
 
 function handleClick () {
@@ -22,7 +22,7 @@ function handleClick () {
     const nota3 = Number(document.getElementById('nota3').value)
     const resultado = document.getElementById('resultado')
 
-    const media = calcularMedia(nota1, nota2, nota3)
+    const media = Number(calcularMedia(nota1, nota2, nota3).toFixed(2))
     const statusECor = definirSituacao(media)
 
     removerClasse()

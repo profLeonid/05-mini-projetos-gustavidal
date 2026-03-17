@@ -14,8 +14,8 @@ function selecionarCor (desconto) {
 }
 
 function removerClasse() {
-    const resultado = document.getElementById('resultado')
-    resultado.classList.remove('desconto1', 'desconto2', 'desconto3')
+    document.getElementById('resultado')
+        .classList.remove('desconto1', 'desconto2', 'desconto3')
 }
 
 function handleClick () {
@@ -28,6 +28,6 @@ function handleClick () {
     const cor = selecionarCor(desconto)
 
     removerClasse()
-    resultado.textContent = `${valorEconomizado} - ${precoFinal}`
+    resultado.textContent = `${valorEconomizado} | ${precoFinal}`
     resultado.classList.add(cor)
 }

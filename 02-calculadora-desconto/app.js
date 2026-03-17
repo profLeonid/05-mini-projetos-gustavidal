@@ -10,10 +10,7 @@ function calcularDesconto() {
     const percentual = document.getElementById('percentual')
     const resultado = document.getElementById('resultado')
     
-    const div = document.createElement('div')
-
-    const p1 = document.createElement('p')
-    const p2 = document.createElement('p')
+    const p = document.createElement('p')
 
     const decimal = percentual.value / 100
     
@@ -28,11 +25,5 @@ function calcularDesconto() {
     let valorFinal = preco.value - (preco.value * decimal)
     let valorEconomizado = preco.value * decimal
 
-    p1.textContent = `Valor economizado: ${valorEconomizado}`
-    p2.textContent = `Valor final: ${valorFinal}`
-
-    div.appendChild(p1.textContent)
-    div.appendChild(p2.textContent)
-
-    resultado.textContent = `${div}`
+    resultado.textContent = `Valor economizado: ${valorEconomizado}\nValor final: ${valorFinal}`
 }

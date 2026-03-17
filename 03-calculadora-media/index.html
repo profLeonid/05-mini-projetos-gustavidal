@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora de Média</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Média</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+    <main>
+        <div class="conteudo">
+            <a href="../index.html" class="voltar">← Voltar</a>
 
-  <main>
-    <div class="conteudo">
+            <h1>
+                Calculadora de
+                <span>Média</span>
+            </h1>
+            <p class="descricao">Digite as três notas para calcular a situação do aluno.</p>
 
-      <a href="../index.html" class="voltar">← Voltar</a>
+            <label>Nota 1</label>
+            <input type="number" placeholder="0 a 10" />
 
-      <h1>
-        Calculadora de
-        <span>Média</span>
-      </h1>
-      <p class="descricao">Digite as três notas para calcular a situação do aluno.</p>
+            <label>Nota 2</label>
+            <input type="number" placeholder="0 a 10" />
 
-      <label>Nota 1</label>
-      <input type="number" placeholder="0 a 10" />
+            <label>Nota 3</label>
+            <input type="number" placeholder="0 a 10" />
 
-      <label>Nota 2</label>
-      <input type="number" placeholder="0 a 10" />
+            <button onclick="calcularMedia()">Calcular Média</button>
 
-      <label>Nota 3</label>
-      <input type="number" placeholder="0 a 10" />
-
-      <button onclick="calcularMedia()">Calcular Média</button>
-
-      <div class="resultado">
-        O resultado aparecerá aqui
-      </div>
-
-    </div>
-  </main>
-
-  <footer>
-    <p>Prof. Fernando Leonid</p>
-  </footer>
-
+            <div class="resultado">
+                O resultado aparecerá aqui
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Prof. Fernando Leonid</p>
+    </footer>
 </body>
-
 </html>

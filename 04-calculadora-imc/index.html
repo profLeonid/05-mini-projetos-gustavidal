@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora de IMC</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+    <main>
+        <div class="conteudo">
+            <a href="../index.html" class="voltar">← Voltar</a>
 
-  <main>
-    <div class="conteudo">
+            <h1>
+                Calculadora de
+                <span>IMC</span>
+            </h1>
+            <p class="descricao">Informe seus dados para calcular e classificar seu IMC.</p>
 
-      <a href="../index.html" class="voltar">← Voltar</a>
+            <label>Nome</label>
+            <input type="text" placeholder="Seu nome" />
 
-      <h1>
-        Calculadora de
-        <span>IMC</span>
-      </h1>
-      <p class="descricao">Informe seus dados para calcular e classificar seu IMC.</p>
+            <label>Altura (em metros)</label>
+            <input type="number" placeholder="Ex: 1.70" step="0.01" />
 
-      <label>Nome</label>
-      <input type="text" placeholder="Seu nome" />
+            <label>Peso (em kg)</label>
+            <input type="number" placeholder="Ex: 70" />
 
-      <label>Altura (em metros)</label>
-      <input type="number" placeholder="Ex: 1.70" step="0.01" />
+            <button onclick="calcularIMC()">Calcular IMC</button>
 
-      <label>Peso (em kg)</label>
-      <input type="number" placeholder="Ex: 70" />
-
-      <button onclick="calcularIMC()">Calcular IMC</button>
-
-      <div class="resultado">
-        O resultado aparecerá aqui
-      </div>
-
-    </div>
-  </main>
-
-  <footer>
-    <p>Prof. Fernando Leonid</p>
-  </footer>
-
+            <div class="resultado">
+                O resultado aparecerá aqui
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Prof. Fernando Leonid</p>
+    </footer>
 </body>
-
 </html>
